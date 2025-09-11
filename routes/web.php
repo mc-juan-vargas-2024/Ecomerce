@@ -14,6 +14,6 @@ Route::get('products/create', function () {
 Route::get('products/{id}/{category}', function ($id, $category = null) {
     if ($category == null){
         return "detalle de cada producto" .$id ;
-    }
-    return "detalle de cada producto" . $id . "de la categoria " .$category;
+    }else{
+        return "detalle de cada producto" . $id . "de la categoria " .$category;}
 });
