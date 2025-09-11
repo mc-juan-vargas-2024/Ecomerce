@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::profix("products")->controller(ProductContoller::class)->group(function (){
-    Route::get('products',"index");
-    Route::get('products/create', "create");
-    Route::get('products/{id}/{category}', "show");
+Route::prefix("products")->controller(ProductContoller::class)->group(function (){
+    Route::get('/',"index");
+    Route::get('/create', "create");
+    Route::get('/{id}/{category}', "show");
 });
