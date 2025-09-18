@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Listado de Productos</title>
-  <style>
+@extends('layouts.app')
+@section('css')
+ <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -68,8 +63,8 @@
       font-weight: bold;
     }
   </style>
-</head>
-<body>
+@endsection
+@section('content')
   <h1>LIST OF PRODUCTS</h1>
 
   <div class="product-grid">
@@ -134,5 +129,18 @@
     </div>
 
   </div>
+@endsection
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Listado de Productos</title>
+
+</head>
+<body>
+
 </body>
 </

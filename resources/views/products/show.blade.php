@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Detalle del Producto</title>
+@extends('layouts.app')
+@section('css')
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -62,9 +57,8 @@
       color: #28a745;
     }
   </style>
-</head>
-<body>
-
+@endsection
+@section('content')
   <div class="product-detail">
     <div class="product-image">
       <img src="https://images.unsplash.com/photo-1587202372775-98973d93c191" alt="Dell XPS 13">
@@ -79,6 +73,19 @@
       <div class="product-price">$999.00</div>
     </div>
   </div>
+@endsection
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Detalle del Producto</title>
+
+</head>
+<body>
+
 
 </body>
 </html>

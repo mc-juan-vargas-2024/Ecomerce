@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Formulario Productos</title>
+@extends('layouts.app')
+@section('css')
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -102,8 +97,8 @@
       transform: scale(1.03);
     }
   </style>
-</head>
-<body>
+@endsection
+@section('content')
   <form action="" method="post">
     <h2>Registrar Producto</h2>
     <fieldset>
@@ -137,5 +132,18 @@
 
     <button type="submit">Guardar Producto</button>
   </form>
+@endsection
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Formulario Productos</title>
+
+</head>
+<body>
+
 </body>
 </html>
