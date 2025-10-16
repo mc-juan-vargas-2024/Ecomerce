@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        .top-bar {
-    background-color: #333; /* Color de fondo oscuro */
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-    </style>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+   
     @yield('css')
 </head>
 <body>
