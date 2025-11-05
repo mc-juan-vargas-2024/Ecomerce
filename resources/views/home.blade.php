@@ -20,4 +20,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> task
