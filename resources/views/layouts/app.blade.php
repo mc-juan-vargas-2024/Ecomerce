@@ -1,11 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-<<<<<<< HEAD
     
-=======
-    @yield("css")
->>>>>>> task
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,13 +16,7 @@
 
     <!-- Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<<<<<<< HEAD
     @yield('css')
-=======
-    <!-- Estilos personalizados -->
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
->>>>>>> task
 </head>
 
 <body>
@@ -48,15 +38,11 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-<<<<<<< HEAD
                         <li class="nav-item">
                                     <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a>
                                 </li>
                         <!-- Authentication Links -->
                         
-=======
-                        <!-- Authentication Links -->
->>>>>>> task
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -97,7 +83,6 @@
             @yield('content')
         </main>
     </div>
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
@@ -106,10 +91,3 @@
 
 
 </html>
-=======
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-</body>
-</html>
->>>>>>> task
