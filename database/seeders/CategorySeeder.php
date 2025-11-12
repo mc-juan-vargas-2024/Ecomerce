@@ -3,14 +3,14 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use Carbon\Factory;
+use Database\Factories\CategoryFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
         $mycategory1= new Category();
@@ -23,6 +23,6 @@ class CategorySeeder extends Seeder
         $mycategory3->name='Tv';
         $mycategory3->save();
 
-        Category::factory(10)->create();
+        Category::factory(20)->create();
     }
 }

@@ -39,7 +39,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a>
+                                    <a class="nav-link" href="{{ route('adminIndex') }}">{{ __('Admin') }}</a>
                                 </li>
                         <!-- Authentication Links -->
                         

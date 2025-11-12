@@ -9,15 +9,44 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class BrandFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+
     public function definition(): array
     {
+        $brand = [
+            'Apple',
+            'Samsung',
+            'Dell',
+            'HP',
+            'Lenovo',
+            'Asus',
+            'Acer',
+            'Microsoft',
+            'Sony',
+            'LG',
+            'Huawei',
+            'Xiaomi',
+            'Intel',
+            'AMD',
+            'NVIDIA',
+            'Logitech',
+            'Razer',
+            'Corsair',
+            'Kingston',
+            'Seagate',
+            'Western Digital',
+            'Canon',
+            'Nikon',
+            'GoPro',
+            'DJI',
+            'Google',
+            'OnePlus',
+            'Motorola',
+            'Alienware',
+            'MSI',
+        ];
+
         return [
-             'name'=> fake()->name()
+            'name' => $this->faker->randomElement($brand),
         ];
     }
 }

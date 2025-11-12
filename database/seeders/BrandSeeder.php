@@ -4,18 +4,16 @@ namespace Database\Seeders;
 
 use App\Models\Brand;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Seeder;
 
 class BrandSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+   
     public function run(): void
-    {
-        $mycategory1= new Brand();
+    {   $mycategory1= new Brand();
         $mycategory1->name='apple';
         $mycategory1->save();
-        Brand::factory(10)->create();
+        Brand::factory(20)->create();
     }
 }

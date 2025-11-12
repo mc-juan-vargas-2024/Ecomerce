@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    function index(){
+    function create(){
          return view('admin.category.create');
     }
      public function store(Request $request){
