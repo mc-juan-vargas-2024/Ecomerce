@@ -49,4 +49,10 @@ class ProductController extends Controller
         $product->save();
         return "Save Product";
     }
+    function table()
+    {    $products = Product::all();
+        return view('products.table',[
+            'products'=>$products
+        ]);
+    }
 }
