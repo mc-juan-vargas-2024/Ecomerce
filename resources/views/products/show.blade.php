@@ -10,11 +10,17 @@
       <img src="https://picsum.photos/600/600?random=31" alt="Producto destacado">
     </div>
     <div class="product-details">
+      <p class="description">
       <h1>{{$product->name }}</h1>
       <p class="description">
         {{$product->description }}
-      </p>
+      </p >
+      <h3>Price</h3>
       <div class="price">$ {{$product->price }}</div>
+      <h3>Category</h3>
+      <l1 class="description" > {{$product->category_id }}</l1>
+      <h3>Brand</h3>
+      <l1 class="description"> {{$product->brand_id }}</l1>
 
       <h3>Características principales:</h3>
       <ul class="features">

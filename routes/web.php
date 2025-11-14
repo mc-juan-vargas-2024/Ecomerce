@@ -30,4 +30,6 @@ Route::prefix('admin')->group(function () {
     
 });
 Route::get('/products/{id}', [ProductController::class, 'showitem'])->name('productShow');
+Route::get('/categories/{id}', [ProductController::class, 'filterByCategory'])->name('categoryShow');
+
 Auth::routes();

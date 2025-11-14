@@ -12,10 +12,22 @@ class ProductController extends Controller
     function index()
     {
         $products = Product::all();
+        $categories = Category::all();
+
         return view('products.index', [
             'products' => $products,
+            'categories' => $categories,
         ]);
     }
+    public function filterByCategory($id)
+    {
+        $category = Category::find($id);
+        $categories = Category::all();
+        $products = Product::where('category_id', $id)->get();
+
+        return view('products.index', compact('products', 'categories', 'category'));
+    }
+
     public function showitem($id)
     {
         $product = Product::find($id);
