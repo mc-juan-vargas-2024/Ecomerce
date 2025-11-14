@@ -11,7 +11,15 @@ class ProductController extends Controller
 {
     function index()
     {
-        return view('products.index');
+        $products = Product::all();
+        return view('products.index', [
+            'products' => $products,
+        ]);
+    }
+    public function showitem($id)
+    {
+        $product = Product::find($id);
+        return view('products.show', ['product' => $product]);
     }
     function create()
     {
@@ -34,7 +42,7 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'required|decimal:0,2',
             'category' => 'required|exists:category,id',
             'brand' => 'required|exists:brand,id',
         ]);
@@ -47,12 +55,19 @@ class ProductController extends Controller
         $product->brand_id = $request->get('brand');
 
         $product->save();
-        return "Save Product";
+        return redirect()->route('productsTable');
     }
     function table()
-    {    $products = Product::all();
-        return view('products.table',[
-            'products'=>$products
+    {
+        $products = Product::orderBy('id', 'desc')->paginate(10);
+        return view('products.table', [
+            'products' => $products
         ]);
+    }
+    public function destroy($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('productsTable');
     }
 }
