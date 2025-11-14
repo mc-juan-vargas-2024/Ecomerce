@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('content')
-    <h1>new category</h1>
+    <h1>New Category</h1>
      <div class="card">
         <div class="card-body">
             <form action="{{ route('categoryStore') }}" method="post">

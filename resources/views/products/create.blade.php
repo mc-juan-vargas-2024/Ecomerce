@@ -16,7 +16,7 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                     <div class="input-group input-group-outline mb-3">
-                        <label for="name" class="form-label">name</label>
+                        <label for="name" class="form-label">Product name</label>
                         <input type="text" class="form-control" id="name" name="name"
                             value="{{ old('name') }}">
                     </div>
@@ -26,7 +26,7 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                     <div class="input-group input-group-outline mb-3">
-                        <label for="description" class="form-label">description</label>
+                        <label for="description" class="form-label">Description</label>
                         <textarea class="form-control" id="description" name="description" rows="3"> {{ old('description') }}</textarea>
                     </div>
 
@@ -61,7 +61,7 @@
                     @enderror
                     <div class="input-group input-group-outline mb-3">
                         <select name="category" class="form-control" id="productCategory">
-                            <option selected disabled>-- category --</option>
+                            <option selected disabled>-- Category --</option>
                             @foreach ($categories as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
@@ -70,7 +70,7 @@
 
                     <!-- Botón de Envío -->
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Create product</button>
+                        <button type="submit" class="btn btn-primary">Save product</button>
                     </div>
                 </form>
 

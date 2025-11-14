@@ -20,19 +20,19 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/tables.html">
+          <a class="nav-link {{Request::is("admin/products") ? "active bg-gradient-dark text-white" :"text-dark"}}" href="{{route('productsTable')}}">
             <i class="material-symbols-rounded opacity-5">table_view</i>
-            <span class="nav-link-text ms-1">products</span>
+            <span class="nav-link-text ms-1">Products</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{Request::is("admin/category") ? "active bg-gradient-dark text-white" :"text-dark"}}" href="{{route('categoryCreate')}}">
+          <a class="nav-link {{Request::is("admin/category") ? "active bg-gradient-dark text-white" :"text-dark"}}" href="{{route('categoryTable')}}">
             <i class="material-symbols-rounded opacity-5">receipt_long</i>
             <span class="nav-link-text ms-1">Categories</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/virtual-reality.html">
+          <a class="nav-link {{Request::is("admin/brand") ? "active bg-gradient-dark text-white" :"text-dark"}}" href="{{route('brandTable')}}">
             <i class="material-symbols-rounded opacity-5">view_in_ar</i>
             <span class="nav-link-text ms-1">Brands</span>
           </a>

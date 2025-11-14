@@ -2,48 +2,37 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            <h3>Products List</h3>
+            <h3>Brands List</h3>
 
-            <a type="button " class="btn btn-success" href="{{ route('productsCreate') }}">New Product</a>
+            <a type="button " class="btn btn-success" href="{{ route('brandCreate') }}">New Brand</a>
             <table class="table align-items-center mb-0" ax>
                 <thead>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Brand</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category
-                    </th>
+                
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
                 </thead>
                 <tbody>
-                    @foreach ($products as $product)
+                    @foreach ($brands as $brand)
                         <tr>
                             <td class="align-middle text-center">
-                                {{ $product->id }}
+                                {{ $brand->id }}
                             </td>
                             <td class="align-middle text-center">
-                                {{ $product->name }}
+                                {{ $brand->name }}
                             </td>
 
-                            <td class="align-middle text-center">
-                                {{ $product->price }}
                             </td>
                             <td class="align-middle text-center">
-                                {{ $product->brand_id }}
+                                {{ $brand->created_at }}
                             </td>
                             <td class="align-middle text-center">
-                                {{ $product->category_id }}
-                            </td>
-                            <td class="align-middle text-center">
-                                {{ $product->created_at }}
-                            </td>
-                            <td class="align-middle text-center">
-                                {{ $product->updated_at }}
+                                {{ $brand->updated_at }}
                             </td>
                             <td>
-                                <form action="{{ route('productsDestroy', $product->id) }}" method="POST">
+                                <form action="{{ route('brandDestroy', $brand->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
@@ -58,7 +47,7 @@
 
                 </tbody>
             </table>
-            {{ $products->links() }}
+            {{ $brands->links() }}
         </div>
     </div>
-@endsection
+@endsectionaa
